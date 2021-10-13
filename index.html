@@ -12,24 +12,30 @@
           <form>  <!-- action="/formData" method="post" -->
           <div class="form-group"> <!--form-group-->
             <label for="application">Application</label>
-            <input type="text" class="form-control" name="application">
+            <input type="text" class="form-control" id="applicationInput" name="application">
             <div><ul class="error" id="application_error"> </ul></div>
           </div>
-           <div class="form-group">
+          <div class="form-group">
             <label for="task">Task</label>
-            <input type="text" class="form-control"  name="task">
+            <input type="text" class="form-control" id="taskInput" name="task">
             <div><ul class="error" id="task_error"></ul></div>
           </div>
-           <div class="form-group">
+          <div class="form-group" id="durationDiv">
             <label for="duration">Duration (hours)</label>
-            <input type="number" min="0" step="0.5" class="form-control" name="duration">
+            <input type="number" min="0" step="0.5" class="form-control" id="durationInput" name="duration">
             <div><ul class="error" id="duration_error"></ul></div>
           </div>
-           <div class="form-group" id="submit_div">
+          <div class="form-group" id="dateDiv">
+           <label for="date">Date</label>
+           <input type="date" id="dateInput" class="form-control" id="dateInput" name="date">
+           <div><ul class="error" id="date_error"></ul></div>
+          </div>
+          <div class="form-group" id="commentsDiv">
             <label for="comments">Comments</label>
-            <textarea class="form-control" name="comments" ></textarea>
+            <textarea class="form-control" id="commentsInput" name="comments" ></textarea>
             <div><ul class="error" id="comments_error"></ul></div>
             <button type="submit" class="btn btn-primary">Create entry</button>
+            <div class="successDiv"><ul id="entrySuccess"></ul></div>
           </div>
         </form>
   </section>
