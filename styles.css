@@ -1,0 +1,55 @@
+.container{
+  padding-top: 100px;
+}
+
+form {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  outline-width: 0.5px; 
+  outline-style: solid;
+  outline-color:  black;
+}
+
+.form-group {
+  padding: 10px;
+  padding-bottom: 1px;
+}
+
+.error{
+  height: 25px;
+  padding-left: 3px;
+  border: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0px;
+}
+
+.error li {
+  list-style-type: none;
+  display: inline;
+  color: red;
+}
+
+#durationDiv {
+  float: left;
+}
+
+#dateDiv {
+  display: inline-block;
+}
+
+#commentsDiv {
+  padding-bottom: 10px;
+}
+
+.successDiv{
+  display: inline-block;
+}
+
+.successDiv li {
+  list-style-type: none;
+  color: green;
+  font-weight: 700;
+  font-size: 115%;
+}
