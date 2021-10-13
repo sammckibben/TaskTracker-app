@@ -17,11 +17,19 @@ app.get("/", function(req, res){
 app.post('/formData', urlencodedParser,
   check('application').isLength({min:3}).withMessage('Application needs atleast two characters').trim()
  ,check('task').not().isEmpty().withMessage('Task must have a value')
- ,check('duration').not().isEmpty().withMessage('Duration must have a value')
- ,check('duration').isDecimal().optional({nullable:true, checkFalsy: true}).withMessage('Duration must be a number')
+ ,check('duration')
+ .custom(val => {
+    if (val > 0) {
+      return true;
+    } else {
+      return false;
+    }
+ })
+ .withMessage('Duration must have a value')
  ,(req, res) =>{
 
   const errors = validationResult(req);
+  var successFlag;
 
   if (!errors.isEmpty()) {
 
@@ -29,16 +37,15 @@ app.post('/formData', urlencodedParser,
 
   } else {
 
-    res.status(202).json({
-    success: 'Yes'
-
-  })
+    return res.status(202).json({
+    success: 'Yes'}
+  )
+  
+  var successFlag = 'Y'
+  res.send(successFlag);
    }
 
-//  errors.forEach(function(err){
-//     errorMsg.innerHTML += '<br>';
-//  });
-
 })
+
 
 app.listen(port, ()=>{ console.log('Server listening on port 3000')});
