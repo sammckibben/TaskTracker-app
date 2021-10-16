@@ -1,5 +1,3 @@
-The Timesheet app is my first Node.js project.
-
-This productivity app is inspired by my hours spent writing my Timesheets on excel.
+This productivity app is inspired by my time spent writing my timesheets in excel, and I hope to eventually use it as my personal timesheet tool.
 
 The goal is to make the app as easy to use and effective as possible.
