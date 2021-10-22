@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Timesheets</title>
+        <title>TaskTracker</title>
         <link rel="stylesheet" href="/css/styles.css">
         <!--MongoDB storage location C:\Program Files\MongoDB\Server\5.0\data\ -->
     </head>
@@ -11,7 +11,7 @@
   <section class="container">
           <form>  <!-- action="/formData" method="post" -->
           <div class="form-group"> <!--form-group-->
-            <label for="application">Application</label>
+            <label for="application">Project</label>
             <input type="text" class="form-control" id="applicationInput" name="application">
             <div><ul class="error" id="application_error"> </ul></div>
           </div>
@@ -34,7 +34,7 @@
             <label for="comments">Comments</label>
             <textarea class="form-control" id="commentsInput" name="comments" ></textarea>
             <div><ul class="error" id="comments_error"></ul></div>
-            <button type="submit" class="btn btn-primary">Create entry</button>
+            <button type="submit" class="btn btn-primary">Submit times</button>
             <div class="successDiv"><ul id="entrySuccess"></ul></div>
           </div>
         </form>
